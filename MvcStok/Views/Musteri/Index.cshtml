@@ -1,0 +1,58 @@
+﻿@using MvcStok.Models.Entity;
+@model List<TBLMUSTERILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+    <p>
+        <strong>Aranacak Müşteri Adı: </strong> @Html.TextBox("p")
+        <input type="submit" value="Ara" />
+    </p>
+}
+
+
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>MÜŞTERİ ID</th>
+            <th>MÜŞTERİ AD</th>
+            <th>MÜŞTERİ SOYAD</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+            <th>ALERT</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mus in Model)
+        {
+            <tr>
+                <th>@mus.MUSTERIID</th>
+                <td>@mus.MUSTERIAD</td>
+                <td>@mus.MUSTERISOYAD</td>
+                <td><a href="/MUSTERI/SIL/@mus.MUSTERIID" class="btn btn-danger">SİL</a></td>
+                <td><a href="/MUSTERI/MusteriGetir/@mus.MUSTERIID" class="btn btn-success">GÜNCELLE</a></td>
+                <td>@Html.ActionLink("Sil Butonu", "SIL", new { id = mus.MUSTERIID }, new { @class = "btn btn-warning", onclick = "return confirm('Gerçekten Silmek istiyor musunuz?')" })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Musteri/YeniMusteri/" class="btn btn-primary"> YENİ MÜŞTERİ EKLE</a>
+
+<script type="text/javascript" src="https://cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
+@*<link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />*@
+
+<link href="https:////cdn.datatables.net/2.1.5/css/dataTables.dataTables.min.css" rel="stylesheet" />
+
+
+
+<script>
+    $('#tbl1').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+        }
+    });
+</script>
