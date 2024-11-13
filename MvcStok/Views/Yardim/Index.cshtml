@@ -1,0 +1,34 @@
+﻿@using MvcStok.Models.Entity
+@model List<TBLHAKKIMDA>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">HAKKIMDA</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Hasan Bilik Kimdir ?</h2>
+            </div>
+            <form method="get" action="/Hakkimda/Index/">
+                @foreach (var item in Model)
+                {
+                    <div class="modal-body">
+                        @Html.TextAreaFor(m=>item.HakkimdaAd , new { @class = "form-control" , @rows="9" , @style="resize:none;", @readonly="readonly"})
+                        <br />
+                      
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                    </div>
+                }
+
+            </form>
+        </div>
+    </div>
+</div>

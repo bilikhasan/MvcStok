@@ -131,6 +131,7 @@
     <Compile Include="Controllers\MusteriController.cs" />
     <Compile Include="Controllers\SatisController.cs" />
     <Compile Include="Controllers\UrunController.cs" />
+    <Compile Include="Controllers\YardimController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -150,6 +151,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TBLHAKKIMDA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TBLKATEGORILER.cs">
@@ -482,6 +486,7 @@
     <Content Include="Views\Musteri\MusteriGetir.cshtml" />
     <Content Include="Views\Urun\UrunGetir.cshtml" />
     <Content Include="Views\Satis\Index.cshtml" />
+    <Content Include="Views\Yardim\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,7 +11,6 @@ namespace MvcStok.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class TBLMUSTERILER
     {
@@ -22,9 +21,6 @@ namespace MvcStok.Models.Entity
         }
     
         public int MUSTERIID { get; set; }
-
-        [Required(ErrorMessage ="Bu alaný boþ býrakamazsýnýz.")]
-        [StringLength(50,ErrorMessage ="En fazla 50 karakter girin.")]
         public string MUSTERIAD { get; set; }
         public string MUSTERISOYAD { get; set; }
     
