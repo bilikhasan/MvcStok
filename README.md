@@ -35,3 +35,11 @@ MSSQL Server serves as the reliable database backbone.
 https://www.linkedin.com/feed/update/urn:li:activity:7279562962414059521/
 
 #ASPNetMVC5 #EntityFramework #MSSQLServer #WebDevelopment #CRUDOperations #Pagination #DataValidation #CodingJourney #SoftwareDevelopment #LearnByDoing #MVCProjects #TechSkills #SoftwareEngineering #DevJourney
+
+
+![1](https://github.com/user-attachments/assets/b1cc1b5e-ce00-4483-a816-9cf2274c6ff0)
+![2](https://github.com/user-attachments/assets/02af0318-a80b-4509-afae-5c05491a18dc)
+![3](https://github.com/user-attachments/assets/e1588183-ce9d-4056-a1c0-0102278c927b)
+![4](https://github.com/user-attachments/assets/2c17df9f-2f6c-4cd3-84a1-f0f254cd58a3)
+
+
